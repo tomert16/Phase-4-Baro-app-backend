@@ -24,7 +24,7 @@ class User < ApplicationRecord
     foreign_key: :user_2,
     class_name: :FriendshipTable
 
-    validates_presence_of :real_name, :username, :email, :password
+    validates_presence_of :real_name, :username, :email
     validates_uniqueness_of :username, :email
 
 
