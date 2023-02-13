@@ -1,0 +1,2 @@
+class CrawlEventCommentsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class BarCrawlsController < ApplicationController
+end

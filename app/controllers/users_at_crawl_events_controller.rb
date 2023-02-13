@@ -1,0 +1,2 @@
+class UsersAtCrawlEventsController < ApplicationController
+end
