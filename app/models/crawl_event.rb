@@ -9,6 +9,6 @@ class CrawlEvent < ApplicationRecord
   has_many :users, through: :pending_invites
   has_many :users, through: :crawl_event_comments
 
-  validates_presence_of :user_id, :bar_crawl_id, :
+  validates_presence_of :user_id, :bar_crawl_id
 
 end

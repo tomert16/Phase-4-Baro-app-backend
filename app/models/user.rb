@@ -17,11 +17,11 @@ class User < ApplicationRecord
     has_many :crawl_events, through: :crawl_event_comments
 
     has_many :friendship_tables_as_user_1,
-    foreign_key: :user_1,
+    foreign_key: :user_1_id,
     class_name: :FriendshipTable
 
     has_many :friendship_tables_as_user_2,
-    foreign_key: :user_2,
+    foreign_key: :user_2_id,
     class_name: :FriendshipTable
 
     validates_presence_of :real_name, :username, :email
