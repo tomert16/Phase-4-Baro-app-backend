@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :friendship_tables
   resources :crawl_event_comments
   resources :pending_invites
   resources :users_at_crawl_events
