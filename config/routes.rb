@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'sessions/create'
+  # get 'sessions/destroy'
   resources :friendship_tables
   resources :crawl_event_comments
   resources :pending_invites
@@ -9,8 +11,13 @@ Rails.application.routes.draw do
   resources :reviews
   resources :users
   resources :bars
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  
+##login route
+  post '/login', to: 'sessions#create'
+  ##logout route
+  delete '/logout', to: 'sessions#destroy'
+## me route auto-login
+  get '/me', to: 'users#show'
+  ## sign up route
+  post '/signup', to: 'users#create'
 end
