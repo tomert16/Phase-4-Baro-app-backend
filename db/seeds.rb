@@ -6,8 +6,8 @@ BarCrawlReview.destroy_all
 CrawlEvent.destroy_all
 CrawlEventComment.destroy_all
 FriendshipTable.destroy_all
-# PendingInvite.destroy_all
-# UsersAtCrawlEvent.destroy_all
+PendingInvite.destroy_all
+UsersAtCrawlEvent.destroy_all
 
 puts "🌱 Seeding bars..."
 whitehorse = Bar.create(name: "White Horse Tavern", image: "https://cdn.usarestaurants.info/assets/uploads/ae536abefd984486112da4556c273945_-united-states-new-york-new-york-county-754702-the-white-horse-tavern-financial-districthtm.jpg",  category: "Tavern", price: "$", closing_time: "0200", location: "25 Bridge St, New York, NY 10004")
@@ -104,3 +104,35 @@ FriendshipTable.create(user_1_id: 3, user_2_id: 1, status: 1)
 FriendshipTable.create(user_1_id: 3, user_2_id: 5, status: 1)
 FriendshipTable.create(user_1_id: 4, user_2_id: 6, status: 1)
 FriendshipTable.create(user_1_id: 5, user_2_id: 7, status: 1)
+
+puts "🌱 Seeding pending invites..."
+PendingInvite.create(user_id: 2, crawl_event_id: 1)
+PendingInvite.create(user_id: 1, crawl_event_id: 1)
+PendingInvite.create(user_id: 3, crawl_event_id: 1)
+PendingInvite.create(user_id: 4, crawl_event_id: 1)
+PendingInvite.create(user_id: 5, crawl_event_id: 1)
+PendingInvite.create(user_id: 6, crawl_event_id: 1)
+PendingInvite.create(user_id: 6, crawl_event_id: 2)
+PendingInvite.create(user_id: 7, crawl_event_id: 2)
+PendingInvite.create(user_id: 8, crawl_event_id: 2)
+PendingInvite.create(user_id: 10, crawl_event_id: 2)
+PendingInvite.create(user_id: 2, crawl_event_id: 3)
+PendingInvite.create(user_id: 3, crawl_event_id: 3)
+PendingInvite.create(user_id: 5, crawl_event_id: 3)
+PendingInvite.create(user_id: 8, crawl_event_id: 3)
+PendingInvite.create(user_id: 11, crawl_event_id: 3)
+PendingInvite.create(user_id: 12, crawl_event_id: 3)
+
+puts "🌱 Seeding users at crawl events..."
+UsersAtCrawlEvent.create(user_id: 10, crawl_event_id:1)
+UsersAtCrawlEvent.create(user_id: 9, crawl_event_id:1)
+UsersAtCrawlEvent.create(user_id: 8, crawl_event_id:1)
+UsersAtCrawlEvent.create(user_id: 3, crawl_event_id:2)
+UsersAtCrawlEvent.create(user_id: 4, crawl_event_id:2)
+UsersAtCrawlEvent.create(user_id: 5, crawl_event_id:2)
+UsersAtCrawlEvent.create(user_id: 1, crawl_event_id:3)
+UsersAtCrawlEvent.create(user_id: 4, crawl_event_id:3)
+UsersAtCrawlEvent.create(user_id: 1, crawl_event_id:4)
+UsersAtCrawlEvent.create(user_id: 2, crawl_event_id:4)
+UsersAtCrawlEvent.create(user_id: 3, crawl_event_id:4)
+UsersAtCrawlEvent.create(user_id: 6, crawl_event_id:4)
