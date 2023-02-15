@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   ##logout route
   delete '/logout', to: 'sessions#destroy'
 ## me route auto-login
-  get '/me', to: 'users#show'
+  get '/me', to: 'users#me'
   ## sign up route
   post '/signup', to: 'users#create'
 end

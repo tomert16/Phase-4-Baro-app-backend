@@ -11,7 +11,12 @@ class UsersController < ApplicationController
         render json: new_user, status: :created
     end
 
-    def show 
+    def show
+        user = User.find(params[:id])
+        render json: user, status: :ok
+    end
+
+    def me
         # byebug
         user = User.find_by(id: session[:user_id])
         render json: user, status: :ok
