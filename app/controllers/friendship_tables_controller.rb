@@ -4,4 +4,5 @@ class FriendshipTablesController < ApplicationController
         friendshipTables = FriendshipTable.all
         render json: friendshipTables
     end
+
 end

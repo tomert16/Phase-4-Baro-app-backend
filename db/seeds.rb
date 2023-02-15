@@ -24,18 +24,18 @@ story = Bar.create(name: "Overstory", image: "https://images.getbento.com/accoun
 ready = Bar.create(name: "The Ready Rooftop Bar", image: "https://media.timeout.com/images/105772937/750/422/image.jpg",  category: "Hotel Bar", price: "$$", closing_time: "2200", location: "112 E 11th St, New York, NY 10003")
 
 puts "🌱 Seeding users..."
-joey = User.create!(real_name: "Joey", username: "j-money", email: "joey@gmail.com", password_digest: "joey123")
-jason = User.create!(real_name: "Jason", username: "jay-son", email: "jason@gmail.com", password_digest: "jason123")
-tomer = User.create(real_name: "Tomer", username: "tt016", email: "tomer@gmail.com", password_digest: "610tt")
-kevin = User.create(real_name: "Kevin", username: "km022", email: "kevin@gmail.com", password_digest: "220mk")
-dan = User.create(real_name: "Daniel", username: "dy008", email: "dan@gmail.com", password_digest: "800yd")
-avi = User.create(real_name: "Avi", username: "ar029", email: "avi@gmail.com", password_digest: "920ra")
-adam = User.create(real_name: "Adam", username: "af017", email: "adam@gmail.com", password_digest: "710fa")
-james = User.create(real_name: "James", username: "jp028", email: "james@gmail.com", password_digest: "820pj")
-olivia = User.create(real_name: "Olivia", username: "or012", email: "olivia@gmail.com", password_digest: "210ro")
-vero = User.create(real_name: "Veronique", username: "vc004", email: "vero@gmail.com", password_digest: "400cv")
-sophia = User.create(real_name: "Sophia", username: "sb030", email: "sophia@gmail.com", password_digest: "030bs")
-diana = User.create(real_name: "Diana", username: "dp026", email: "diana@gmail.com", password_digest: "620pd")
+joey = User.create!(real_name: "Joey", username: "j-money", email: "joey@gmail.com", password: "joey123")
+jason = User.create!(real_name: "Jason", username: "jay-son", email: "jason@gmail.com", password: "jason123")
+tomer = User.create(real_name: "Tomer", username: "tt016", email: "tomer@gmail.com", password: "610tt")
+kevin = User.create(real_name: "Kevin", username: "km022", email: "kevin@gmail.com", password: "220mk")
+dan = User.create(real_name: "Daniel", username: "dy008", email: "dan@gmail.com", password: "800yd")
+avi = User.create(real_name: "Avi", username: "ar029", email: "avi@gmail.com", password: "920ra")
+adam = User.create(real_name: "Adam", username: "af017", email: "adam@gmail.com", password: "710fa")
+james = User.create(real_name: "James", username: "jp028", email: "james@gmail.com", password: "820pj")
+olivia = User.create(real_name: "Olivia", username: "or012", email: "olivia@gmail.com", password: "210ro")
+vero = User.create(real_name: "Veronique", username: "vc004", email: "vero@gmail.com", password: "400cv")
+sophia = User.create(real_name: "Sophia", username: "sb030", email: "sophia@gmail.com", password: "030bs")
+diana = User.create(real_name: "Diana", username: "dp026", email: "diana@gmail.com", password: "620pd")
 
 puts "🌱 Seeding reviews..."
 Review.create(star_rating: 4.5, content: "blah blah bleh", bar_id: story.id, user_id: joey.id)
@@ -95,15 +95,17 @@ CrawlEventComment.create(crawl_event_id: avisParty.id, user_id: james.id, commen
 
 
 puts "🌱 Seeding friendship tables..."
-FriendshipTable.create(user_1_id: 2, user_2_id: 1, status: 0)
-FriendshipTable.create(user_1_id: 2, user_2_id: 3, status: 1)
-FriendshipTable.create(user_1_id: 2, user_2_id: 4, status: 1)
-FriendshipTable.create(user_1_id: 2, user_2_id: 5, status: 0)
-FriendshipTable.create(user_1_id: 2, user_2_id: 6, status: 0)
-FriendshipTable.create(user_1_id: 3, user_2_id: 1, status: 1)
-FriendshipTable.create(user_1_id: 3, user_2_id: 5, status: 1)
-FriendshipTable.create(user_1_id: 4, user_2_id: 6, status: 1)
-FriendshipTable.create(user_1_id: 5, user_2_id: 7, status: 1)
+FriendshipTable.create(user_1_id: 2, user_2_id: 1, friend_status: 0)
+FriendshipTable.create(user_1_id: 2, user_2_id: 3, friend_status: 1)
+FriendshipTable.create(user_1_id: 2, user_2_id: 4, friend_status: 1)
+FriendshipTable.create(user_1_id: 2, user_2_id: 5, friend_status: 0)
+FriendshipTable.create(user_1_id: 2, user_2_id: 6, friend_status: 0)
+FriendshipTable.create(user_1_id: 3, user_2_id: 1, friend_status: 1)
+FriendshipTable.create(user_1_id: 3, user_2_id: 5, friend_status: 1)
+FriendshipTable.create(user_1_id: 4, user_2_id: 6, friend_status: 1)
+FriendshipTable.create(user_1_id: 5, user_2_id: 7, friend_status: 1)
+FriendshipTable.create(user_1_id: 7, user_2_id: 3, friend_status: 1)
+
 
 puts "🌱 Seeding pending invites..."
 PendingInvite.create(user_id: 2, crawl_event_id: 1)
