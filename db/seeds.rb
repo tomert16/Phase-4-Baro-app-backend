@@ -95,15 +95,17 @@ CrawlEventComment.create(crawl_event_id: avisParty.id, user_id: james.id, commen
 
 
 puts "🌱 Seeding friendship tables..."
-FriendshipTable.create(user_1_id: 2, user_2_id: 1, status: 0)
-FriendshipTable.create(user_1_id: 2, user_2_id: 3, status: 1)
-FriendshipTable.create(user_1_id: 2, user_2_id: 4, status: 1)
-FriendshipTable.create(user_1_id: 2, user_2_id: 5, status: 0)
-FriendshipTable.create(user_1_id: 2, user_2_id: 6, status: 0)
-FriendshipTable.create(user_1_id: 3, user_2_id: 1, status: 1)
-FriendshipTable.create(user_1_id: 3, user_2_id: 5, status: 1)
-FriendshipTable.create(user_1_id: 4, user_2_id: 6, status: 1)
-FriendshipTable.create(user_1_id: 5, user_2_id: 7, status: 1)
+FriendshipTable.create(user_1_id: 2, user_2_id: 1, friend_status: 0)
+FriendshipTable.create(user_1_id: 2, user_2_id: 3, friend_status: 1)
+FriendshipTable.create(user_1_id: 2, user_2_id: 4, friend_status: 1)
+FriendshipTable.create(user_1_id: 2, user_2_id: 5, friend_status: 0)
+FriendshipTable.create(user_1_id: 2, user_2_id: 6, friend_status: 0)
+FriendshipTable.create(user_1_id: 3, user_2_id: 1, friend_status: 1)
+FriendshipTable.create(user_1_id: 3, user_2_id: 5, friend_status: 1)
+FriendshipTable.create(user_1_id: 4, user_2_id: 6, friend_status: 1)
+FriendshipTable.create(user_1_id: 5, user_2_id: 7, friend_status: 1)
+FriendshipTable.create(user_1_id: 7, user_2_id: 3, friend_status: 1)
+
 
 puts "🌱 Seeding pending invites..."
 PendingInvite.create(user_id: 2, crawl_event_id: 1)

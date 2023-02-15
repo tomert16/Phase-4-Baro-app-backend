@@ -3,9 +3,9 @@
 one:
   user_1: 1
   user_2: 1
-  status: 1
+  friend_status: 1
 
 two:
   user_1: 1
   user_2: 1
-  status: 1
+  friend_status: 1
