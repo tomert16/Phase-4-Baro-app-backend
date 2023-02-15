@@ -5,8 +5,14 @@ class BarCrawlsController < ApplicationController
         render json: barCrawls
     end
 
-    def show
-        barCrawl = BarCrawl.find(params[:id])
+    def create
+        barCrawl = BarCrawl.create(bar_crawl_params)
         render json: barCrawl
+    end
+
+    private
+
+    def bar_crawl_params
+        params.permit(:bar_crawl_name, :bar_crawl_bars_id, :user_id, :public_private)
     end
 end
