@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_secure_password
+    
     has_many :reviews
     has_many :bars, through: :reviews
 
@@ -25,7 +27,8 @@ class User < ApplicationRecord
     class_name: :FriendshipTable
 
     validates_presence_of :real_name, :username, :email
-    validates_uniqueness_of :username, :email
+    # validates_uniqueness_of :username, :email
+    validates :username, :email, uniqueness: true
 
 
 end
