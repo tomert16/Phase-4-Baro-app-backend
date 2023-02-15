@@ -13,8 +13,8 @@ class UsersController < ApplicationController
 
     def show 
         # byebug
-        # user = User.find_by(id: session[:user_id])
-        render json: current_user, status: :ok
+        user = User.find_by(id: session[:user_id])
+        render json: user, status: :ok
     end
 
     private
