@@ -13,11 +13,13 @@ Rails.application.routes.draw do
   resources :bars
   
 ##login route
-  post '/login', to: 'sessions#create'
+  post 'login', to: 'sessions#create'
   ##logout route
-  delete '/logout', to: 'sessions#destroy'
+  delete 'logout', to: 'sessions#destroy'
 ## me route auto-login
-  get '/me', to: 'users#me'
+  get 'me', to: 'users#me'
   ## sign up route
-  post '/signup', to: 'users#create'
+  post 'signup', to: 'users#create'
+
+  # get '/test', to: 'users#test_route'
 end
