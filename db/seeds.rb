@@ -80,10 +80,10 @@ BarCrawlReview.create(user_id: avi.id, bar_crawl_id: saturdayCrawl.id, star_rati
 BarCrawlReview.create(user_id: olivia.id, bar_crawl_id: wednesdayCrawl.id, star_rating: 1, content: "worst. everywhere smelled and the other patrons were mean to me.")
 
 puts "🌱 Seeding crawl events..."
-projectParty = CrawlEvent.create(user_id: vero.id, bar_crawl_id: thursdayCrawl.id, message: "Post-project celebration!")
-hangout = CrawlEvent.create(user_id: olivia.id, bar_crawl_id: saturdayCrawl.id, message: "let's hang out :)")
-kevinsParty = CrawlEvent.create(user_id: avi.id, bar_crawl_id: mondayCrawl.id, message: "Kevin's Birthday Bash")
-avisParty = CrawlEvent.create(user_id: kevin.id, bar_crawl_id: thursdayCrawl.id, message: "Avi's Birthday Bash")
+projectParty = CrawlEvent.create(user_id: vero.id, bar_crawl_id: thursdayCrawl.id, event_name: "Post-project celebration!", event_description: "We did it! Let's celebrate our hard work with a night out on the town.")
+hangout = CrawlEvent.create(user_id: olivia.id, bar_crawl_id: saturdayCrawl.id, event_name: "let's hang out :)", event_description: "I'm bored and I want to go out. Anyone want to join me?" )
+kevinsParty = CrawlEvent.create(user_id: avi.id, bar_crawl_id: mondayCrawl.id, event_name: "Kevin's Birthday Bash", event_description: "It's Kevin's birthday! Let's go out and celebrate his special day.")
+avisParty = CrawlEvent.create(user_id: kevin.id, bar_crawl_id: thursdayCrawl.id, event_name: "Avi's Birthday Bash", event_description: "It's Avi's birthday! Let's go out and celebrate his special day.")
 
 puts "🌱 Seeding crawl event comments..."
 CrawlEventComment.create(crawl_event_id: kevinsParty.id, user_id: vero.id, comment:"can't wait!")

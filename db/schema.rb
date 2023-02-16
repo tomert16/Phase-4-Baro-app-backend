@@ -56,7 +56,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_190929) do
   create_table "crawl_events", force: :cascade do |t|
     t.integer "bar_crawl_id", null: false
     t.integer "user_id", null: false
-    t.text "message"
+    t.string "event_name"
+    t.text "event_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bar_crawl_id"], name: "index_crawl_events_on_bar_crawl_id"
