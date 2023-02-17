@@ -13,17 +13,14 @@ class UsersController < ApplicationController
     end
 
     def show
-        if current_user
             user = User.find(params[:id])
             render json: user, status: :ok
-        end
     end
 
     def me
         
         p 'ME'
         p session[:user_id]
-        # byebug
         # user = User.find_by!(id: session[:user_id])
         render json: current_user, status: :ok
     end

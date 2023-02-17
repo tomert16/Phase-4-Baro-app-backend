@@ -7,8 +7,12 @@ class ApplicationController < ActionController::API
 
     private 
     
-    def current_user 
+    def current_user
         @current_user ||= User.find_by(id: session[:user_id])
+    end
+
+    def current_friend
+        @current_friend ||= FriendshipTable.find_by(user_2_id: params[:user_2_id])
     end
 
     def render_unprocessable_entity(invalid)
